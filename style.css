@@ -1,5 +1,8 @@
 body {
     font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    max-width: 1920px;
+    min-height: 100vh; /* Ensures full viewport height */
 }
 
 .logo {
@@ -12,16 +15,18 @@ a {
     text-decoration: none;
     color: #e5e7eb;
     font-size: 18px;
+    padding-right: 32px;
 }
 
 .header {
     background-color: #1f2937;
     display: flex;
     justify-content: space-between;
-    padding-left: 48px;
-    padding-right: 48px;
+    padding-left: 320px;
+    padding-right: 320px;
     padding-top: 24px;
     padding-bottom: 24px;
+    flex-wrap: wrap;
 }
 
 .content-1 {
@@ -29,19 +34,25 @@ a {
     color: #f9faf8;
     display: flex;
     justify-content: space-between;
-    padding: 48px
+    padding: 64px;
+    padding-left: 320px;
+    padding-right: 320px;
+    gap: 64px;
+    flex-wrap: wrap;
 }
 
 .content-1-header {
     font-size: 48px;
     font-weight: 900;
     margin-bottom: 8px;
+    max-width: 500px;
 }
 
 .content-1-subtext {
     font-size: 18px;
     color: #e5e7eb;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+    max-width: 500px;
 }
 
 .signup-1 {
@@ -59,10 +70,237 @@ a {
     border: 2px solid none;
     background-color: grey;
     padding: 20px; 
-    width: 600px;
+    width: 500px;
     height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 18px;
+    flex: 0 0 auto;
+}
+
+.content-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-2-header {
+    padding: 48px;
+    font-size: 36px;
+    color: #1f2937;
+    font-weight: 900;
+}
+
+.placeholder-2 {
+    border: 5px solid #3882f6;
+    border-radius: 25px;
+    padding: 20px;
+    width: 150px;
+    height: 150px;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 200px;
+}
+
+.content-2-text {
+    font-size: 18px;
+    color: grey;
+    display: flex;
+    justify-content: center;
+    gap:  64px;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 72px;
+    flex-wrap: wrap;
+}
+
+.content-3 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 512px;
+    padding-right: 512px;
+    background-color: #e5e7eb;
+    padding-top: 128px;
+    padding-bottom: 128px;
+    flex-wrap: wrap;
+}
+
+.content-3-text {
+    font-size: 36px;
+    font-style: italic;
+    color: #1f2937;
+    text-align: justify;
+}
+
+.content-3-author {
+    text-align: right;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.content-4 {
+    padding: 128px;
+    padding-left: 256px;
+    padding-right: 256px;
+}
+
+.content-4-frame {
+    background-color: #3882f6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 64px;
+    flex-wrap: wrap;
+}
+
+.content-4-text {
+    margin: 64px;
+    /* margin-left: 24px;
+    margin-right: 128px; */
+    color: #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* padding: 48px; */
+}
+
+.content-4-header {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+.content-4-subtext {
+    font-size: 24px;
+}
+
+.content-4-button {
+    background-color: #3882f6;
+    color: #f9faf8;
+    border: 2px solid #f9faf8;
+    font-weight: 900;
+    font-size: 24px;
+    padding: 8px;
+    padding-left: 24px;
+    padding-right: 24px;
+    border-radius: 10px;
+}
+
+.footer {
+    background-color: #1f2937;
+    color: #f9faf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+    .header {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .content-1 {
+        padding: 32px;
+        padding-left: 64px;
+        padding-right: 64px;
+        flex-direction: column; /* Stack items vertically */
+        gap: 32px;
+    }
+
+    .content-1-header, .content-1-subtext {
+        max-width: 100%; /* Allow text to use full width */
+    }
+
+    .placeholder {
+        width: 100%; /* Full width */
+        height: 150px; /* Reduced height */
+    }
+
+    .content-2-text {
+        gap: 32px;
+        padding: 32px;
+    }
+
+    .content-3 {
+        padding: 64px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+
+    .content-4 {
+        padding: 32px;
+    }
+
+    .content-4-frame {
+        flex-direction: column;
+        margin: 32px;
+        text-align: center;
+    }
+
+    .content-4-text {
+        margin: 32px;
+    }
+}
+
+/* For even smaller screens (mobile phones) */
+@media screen and (max-width: 480px) {
+    .header {
+        padding-left: 16px;
+        padding-right: 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .content-1 {
+        padding: 16px;
+    }
+
+    .content-1-header {
+        font-size: 36px;
+    }
+
+    .content-2-header {
+        font-size: 28px;
+        padding: 24px;
+    }
+
+    .content-2-text {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .content-3-text {
+        font-size: 24px;
+    }
+
+    .content-4-header {
+        font-size: 24px;
+    }
+
+    .content-4-subtext {
+        font-size: 18px;
+    }
+
+    .content-4-button {
+        font-size: 18px;
+    }
+
+    .content-4-frame {
+        margin: 16px;
+    }
+
+    .content-4-text {
+        margin: 16px;
+    }
 }
