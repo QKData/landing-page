@@ -221,11 +221,6 @@ a {
         max-width: 100%; /* Allow text to use full width */
     }
 
-    .placeholder {
-        width: 100%; /* Full width */
-        height: 150px; /* Reduced height */
-    }
-
     .content-2-text {
         gap: 32px;
         padding: 32px;
